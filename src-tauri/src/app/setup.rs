@@ -13,7 +13,6 @@ pub fn set_system_tray(app: &AppHandle, show_system_tray: bool) -> tauri::Result
     app.app_handle().remove_tray_by_id("pake-tray");
 
     let tray = TrayIconBuilder::new()
-        // 不再设置 .menu()
         .on_tray_icon_event(|app, event| {
             if event.click_type == tauri::tray::ClickType::Left {
                 if let Some(window) = app.get_webview_window("pake") {
