@@ -1,10 +1,7 @@
 use std::str::FromStr;
 use std::sync::{Arc, Mutex};
 use std::time::{Duration, Instant};
-use tauri::{
-    tray::TrayIconBuilder,
-    AppHandle, Manager,
-};
+use tauri::{tray::TrayIconBuilder, AppHandle, Manager};
 use tauri_plugin_global_shortcut::{GlobalShortcutExt, Shortcut};
 use tauri_plugin_window_state::{AppHandleExt, StateFlags};
 
